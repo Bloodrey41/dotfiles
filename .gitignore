@@ -6,6 +6,7 @@
 !qtile/
 !fish/
 !redshift.conf
+!.tmux.conf
 !README.md
 
 qtile/__pycache__/

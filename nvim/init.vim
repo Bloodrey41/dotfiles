@@ -71,7 +71,7 @@ let mapleader = ' '
 " THEMES
 " 
 "let g:gruvbox_contrast_dark='hard'
-colorscheme tokyonight
+colorscheme tokyonight-night
 
 "Uncomment the following 3 lines for transparent background
 highlight Normal ctermbg=NONE guibg=NONE
