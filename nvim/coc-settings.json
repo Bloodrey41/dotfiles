@@ -1,5 +1,8 @@
 {
     "suggest.noselect": false,
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
     "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
     "typescript.format.semicolons": "remove",
     "typescript.preferences.quoteStyle": "single",
