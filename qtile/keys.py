@@ -45,7 +45,7 @@ keys = [
     Key([mod], "q", lazy.window.kill()),
     Key([mod], "t", lazy.spawn('xterm')),
     Key([mod], "v", lazy.spawn('pavucontrol')),
-    Key([mod], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#ff1493' -sb '#ff1493' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=15'")),
+    Key([mod], "d", lazy.spawn("dmenu_run -i -nb '#111111' -nf '#00b0ff' -sb '#00b0ff' -sf '#111111' -fn 'NotoMonoRegular:bold:pixelsize=15'")),
     Key([mod], "Escape", lazy.spawn('xkill')),
     Key([mod], "Return", lazy.spawn(myTerm)),
     Key([mod], "KP_Enter", lazy.spawn(myTerm)),
