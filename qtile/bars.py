@@ -28,7 +28,7 @@ def init_widgets_list():
 
             font='Hurmit Nerd Font',
 
-            fontsize=15,
+            fontsize=14,
             margin_y=3,
             margin_x=2,
             padding_y=5,
@@ -58,7 +58,7 @@ def init_widgets_list():
             padding_x=0,
             padding_y=0,
             margin_y=0,
-            fontsize=17,
+            fontsize=16,
             border=colors[3],
             foreground=colors[4],
             margin=2,
@@ -79,7 +79,7 @@ def init_widgets_list():
 
         widget.CurrentLayout(
             font="Hack Nerd Font Bold",
-            fontsize=16,
+            fontsize=15,
             foreground=colors[1],
             background=colors[0]
         ),
@@ -87,7 +87,7 @@ def init_widgets_list():
 
         widget.Net(
             font="Hack Nerd Font",
-            fontsize=16,
+            fontsize=15,
             # Here enter your network name
             interface="wlo1",
             format='{down} ↓↑ {up}',
@@ -100,7 +100,7 @@ def init_widgets_list():
             font="Hack Nerd Font",
             format='{freq_current}GHz {load_percent}%',
             update_interval=1,
-            fontsize=16,
+            fontsize=15,
             foreground=colors[1],
             background=colors[13],
             mouse_callbacks={
@@ -109,9 +109,9 @@ def init_widgets_list():
 
         widget.Memory(
             font="Hack Nerd Font",
-            format='{MemUsed: .0f}M/{MemTotal: .0f}M',
+            format='{MemUsed:.0f}M/{MemTotal:.0f}M',
             update_interval=1,
-            fontsize=16,
+            fontsize=15,
             measure_mem='M',
             foreground=colors[1],
             background=colors[9],
@@ -122,7 +122,7 @@ def init_widgets_list():
         widget.Clock(
             foreground=colors[4],
             background=colors[15],
-            fontsize=16,
+            fontsize=15,
             format="%Y-%m-%d %H:%M"
         ),
 
