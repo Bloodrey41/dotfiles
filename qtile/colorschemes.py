@@ -22,10 +22,10 @@ colorschemes = {
             ],
         "bluescheme": [
             ["#000000", "#000000"],   # 0 - Layout section background color
-            ["#cfd8dc", "#cfd8dc"],  # 1 - Default text color
-            ["#bbdefb", "#bbdefb"],  # 2 - Inactive groups text color
+            ["#eeeeee", "#eeeeee"],  # 1 - Default text color
+            ["#bbbbbb", "#bbbbbb"],  # 2 - Inactive groups text color
             ["#1976d2", "#1976d2"],  # 3 - Active window border color
-            ["#ffffff", "#ffffff"],  # 4 - Date section text color
+            ["#eeeeee", "#eeeeee"],  # 4 - Date section text color
             ["#1e88e5", "#1e88e5"],  # 5 - Widget section background color
             ["#64b5f6", "#64b5f6"],  # 6
             ["#80d8ff", "#80d8ff"],  # 7
