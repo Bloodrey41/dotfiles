@@ -50,6 +50,8 @@ keys = [
     Key([mod], "Return", lazy.spawn(myTerm)),
     Key([mod], "KP_Enter", lazy.spawn(myTerm)),
     Key([mod], "x", lazy.shutdown()),
+    Key([mod], "period", lazy.next_screen()),
+    Key([mod], "comma", lazy.prev_screen()),
 
     # SUPER + SHIFT KEYS
 

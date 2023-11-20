@@ -23,20 +23,20 @@ colorschemes = {
         "bluescheme": [
             ["#000000", "#000000"],   # 0 - Layout section background color
             ["#eeeeee", "#eeeeee"],  # 1 - Default text color
-            ["#bbbbbb", "#bbbbbb"],  # 2 - Inactive groups text color
+            ["#bcbcbc", "#bcbcbc"],  # 2 - Inactive groups text color
             ["#1976d2", "#1976d2"],  # 3 - Active window border color
             ["#eeeeee", "#eeeeee"],  # 4 - Date section text color
-            ["#1e88e5", "#1e88e5"],  # 5 - Widget section background color
-            ["#64b5f6", "#64b5f6"],  # 6
+            ["#0d47a1", "#0d47a1"],  # 5 - Widget section background color
+            ["#00b0ff", "#00b0ff"],  # 6
             ["#80d8ff", "#80d8ff"],  # 7
-            ["#00b0ff", "#00b0ff"],  # 8 - Groups background color
-            ["#1565c0", "#1565c0"],  # 9 - RAM section background color
+            ["#1e88e5", "#1e88e5"],  # 8 - Groups background color
+            ["#2196f3", "#2196f3"],  # 9 - RAM section background color
             ["#90a4ae", "#90a4ae"],  # 10 - Unfocused monitor group background color
             ["#607d8b", "#607d8b"],  # 11
             ["#455a64", "#455a64"],  # 12 - Window section background color
-            ["#2196f3", "#2196f3"],  # 13 - GPU section background color
+            ["#64b5f6", "#64b5f6"],  # 13 - GPU section background color
             ["#263238", "#263238"],  # 14
-            ["#0d47a1", "#0d47a1"],  # 15 - Date section background color
+            ["#1565c0", "#1565c0"],  # 15 - Date section background color
             ]
         }
 
