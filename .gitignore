@@ -1,9 +1,13 @@
 *
 
 !.gitignore
-!nvim
-!alacritty
-!qtile
-!fish
+!nvim/
+!alacritty/
+!qtile/
+!fish/
 !redshift.conf
 !README.md
+
+qtile/__pycache__/
+qtile/venv/
+qtile/icons/
