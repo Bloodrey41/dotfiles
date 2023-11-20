@@ -74,9 +74,9 @@ let mapleader = ' '
 colorscheme tokyonight
 
 "Uncomment the following 3 lines for transparent background
-highlight Normal ctermbg=NONE guibg=NONE
-highlight LineNr ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
+"highlight Normal ctermbg=NONE guibg=NONE
+"highlight LineNr ctermbg=NONE guibg=NONE
+"highlight SignColumn ctermbg=NONE guibg=NONE
 
 " 
 " LIGHTLINE
