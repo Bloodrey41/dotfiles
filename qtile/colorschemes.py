@@ -21,22 +21,22 @@ colorschemes = {
             ["#ffb86c", "#ffb86c"]   # 15
             ],
         "bluescheme": [
-            ["#111111", "#111111"],  # 0 - Layout section background color
+            ["#041016", "#041016"],  # 0 - Layout section background color
             ["#eeeeee", "#eeeeee"],  # 1 - Default text color
-            ["#aaaaaa", "#aaaaaa"],  # 2 - Inactive groups text color
+            ["#777777", "#777777"],  # 2 - Inactive groups text color
             ["#1976d2", "#1976d2"],  # 3 - Active window label border color
             ["#eeeeee", "#eeeeee"],  # 4 - Date section text color
-            ["#0d47a1", "#0d47a1"],  # 5 - Widget section background color
-            ["#80d8ff", "#80d8ff"],  # 6
-            ["#1e88e5", "#1e88e5"],  # 7
-            ["#263238", "#263238"],  # 8 - Groups background color
-            ["#2196f3", "#2196f3"],  # 9 - RAM section background color
-            ["#90a4ae", "#90a4ae"],  # 10 - Unfocused monitor group background color
+            ["#071450", "#071450"],  # 5 - Widget section background color
+            ["#5f707a", "#5f707a"],  # 6 - Secondary monitor unfocused group background color
+            ["#0b66c3", "#0b66c3"],  # 7
+            ["#050027", "#050027"],  # 8 - Groups background color
+            ["#3c58ac", "#3c58ac"],  # 9 - RAM section background color
+            ["#34335a", "#34335a"],  # 10 - Unfocused group background color
             ["#607d8b", "#607d8b"],  # 11
-            ["#64b5f6", "#64b5f6"],  # 12 - Window section background color
-            ["#00b0ff", "#00b0ff"],  # 13 - GPU section background color
-            ["#455a64", "#455a64"],  # 14 - Inactive window border color
-            ["#1565c0", "#1565c0"],  # 15 - Date section background color
+            ["#1a36ab", "#1a36ab"],  # 12 - Window section background color
+            ["#5e7ace", "#5e7ace"],  # 13 - GPU section background color
+            ["#344964", "#344964"],  # 14 - Inactive window border color
+            ["#1a368a", "#1a368a"],  # 15 - Date section background color
             ]
         }
 
