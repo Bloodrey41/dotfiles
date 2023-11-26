@@ -2,6 +2,7 @@
 
 !.gitignore
 !nvim/
+!nvim.bak/
 !alacritty/
 !qtile/
 !fish/
