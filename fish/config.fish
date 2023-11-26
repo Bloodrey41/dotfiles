@@ -176,6 +176,7 @@ alias vi nvim
 alias vim nvim
 alias obsidian '~/Desktop/Obsidian-1.4.16.AppImage & disown'
 
-## bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set --export CARGO_INSTALL "$HOME/.cargo"
+set --export PATH $CARGO_INSTALL/bin $PATH
