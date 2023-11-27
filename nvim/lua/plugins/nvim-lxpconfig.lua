@@ -9,6 +9,7 @@ return {
         pyright = {},
         intelephense = {},
         rust_analyzer = {},
+        cssls = {},
       },
     },
   },
