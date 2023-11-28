@@ -5,6 +5,16 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
+        tsserver = {
+          settings = {
+            typescript = {
+              preferences = {
+                quoteStyle = "single",
+                useSemicolonStyle = false,
+              },
+            },
+          },
+        },
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         intelephense = {},
