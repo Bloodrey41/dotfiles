@@ -14,7 +14,7 @@ xrandr --output HDMI-2 --primary
 lxsession &
 run nm-applet &
 run pamac-tray &
-numlockx on &
+# numlockx on &
 blueman-applet &
 #flameshot &
 #picom --config $HOME/.config/picom/picom.conf &

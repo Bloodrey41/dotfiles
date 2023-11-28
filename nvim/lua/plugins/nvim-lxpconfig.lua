@@ -10,6 +10,11 @@ return {
             typescript = {
               preferences = {
                 quoteStyle = "single",
+              },
+            },
+            javascript = {
+              preferences = {
+                quoteStyle = "single",
                 useSemicolonStyle = false,
               },
             },
