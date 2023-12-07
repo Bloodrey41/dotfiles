@@ -3,6 +3,4 @@
 -- Add any additional options here
 local opt = vim.opt
 
--- opt.tabstop = 4
--- opt.shiftwidth = 4
 opt.wrap = true
