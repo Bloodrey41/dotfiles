@@ -119,6 +119,7 @@ keys = [
     # QTILE LAYOUT KEYS
     Key([mod], "n", lazy.layout.normalize()),
     Key([mod], "space", lazy.next_layout()),
+    Key([mod, "shift"], "space", lazy.prev_layout()),
 
     # CHANGE FOCUS
     Key([mod], "Up", lazy.layout.up()),
@@ -220,7 +221,7 @@ keys = [
 
 
     # TOGGLE FLOATING LAYOUT
-    Key([mod, "shift"], "space", lazy.window.toggle_floating()),
+    Key([mod, "control"], "space", lazy.window.toggle_floating()),
 
 
 
