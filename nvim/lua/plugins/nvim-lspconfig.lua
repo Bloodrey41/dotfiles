@@ -26,6 +26,7 @@ return {
         rust_analyzer = {},
         rls = {},
         cssls = {},
+        html = {},
       },
     },
   },
