@@ -5,6 +5,7 @@
 
 !.config
 .config/*
+!.config/redshift.conf
 !.config/nvim
 !.config/qtile
 .config/qtile/__pycache__
