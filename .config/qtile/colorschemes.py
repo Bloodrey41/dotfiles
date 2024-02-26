@@ -24,7 +24,7 @@ colorschemes = {
             ["#eeeeee", "#eeeeee"],  # 1 - Default text color
             ["#666666", "#666666"],  # 2 - Inactive groups text color
             ["#1976d2", "#1976d2"],  # 3 - Active window label border color
-            ["#eeeeee", "#eeeeee"],  # 4 - Date section text color
+            ["#ddddff", "#ddddff"],  # 4 - Date section text color - Active window border color
             ["#071461", "#071461"],  # 5 - Widget section background color
             ["#5f708b", "#5f708b"],  # 6 - Secondary monitor unfocused group background color
             ["#0b66c3", "#0b66c3"],  # 7
