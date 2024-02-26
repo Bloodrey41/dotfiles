@@ -7,7 +7,6 @@
 .config/*
 !.config/nvim
 !.config/qtile
-.config/qtile/icons
 .config/qtile/__pycache__
 !.config/fish
 !.config/alacritty
