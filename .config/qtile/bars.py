@@ -26,7 +26,7 @@ def init_widgets_list():
             foreground=colors[7],
             background=colors[8],
 
-            font='UbuntuMono Nerd Font',
+            font='JetBrainsMono Nerd Font',
 
             fontsize=15,
             margin_y=3,
@@ -78,7 +78,7 @@ def init_widgets_list():
         ),
 
         widget.CurrentLayout(
-            font="Noto Sans Bold",
+            font="JetBrainsMono Nerd Font",
             fontsize=16,
             foreground=colors[1],
             background=colors[0]
@@ -86,7 +86,7 @@ def init_widgets_list():
 
 
         widget.Net(
-            font="Noto Sans",
+            font="JetBrainsMono Nerd Font",
             fontsize=16,
             # Here enter your network name
             interface="wlo1",
@@ -97,7 +97,7 @@ def init_widgets_list():
         ),
 
         widget.CPU(
-            font="Noto Sans",
+            font="JetBrainsMono Nerd Font",
             format='{freq_current}GHz {load_percent}%',
             update_interval=1,
             fontsize=16,
@@ -108,7 +108,7 @@ def init_widgets_list():
         ),
 
         widget.Memory(
-            font="Noto Sans",
+            font="JetBrainsMono Nerd Font",
             format='{MemUsed: .0f}M/{MemTotal: .0f}M',
             update_interval=1,
             fontsize=16,
