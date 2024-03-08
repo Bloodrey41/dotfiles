@@ -1,8 +1,13 @@
 {
-  "suggest.enablePreselect": false,
+  "suggest.enablePreselect": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
+  "workspace.ignoredFolders": [
+  	"$HOME",
+	"$HOME/.cargo/**",
+	"$HOME/.rustup/**"
+  ],
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "typescript.format.semicolons": "remove",
   "typescript.preferences.quoteStyle": "single",
