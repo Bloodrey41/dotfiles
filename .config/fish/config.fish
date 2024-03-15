@@ -177,3 +177,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # rust
 set --export PATH "$HOME/.cargo/bin" $PATH
+
+# flutter
+set --export PATH "$HOME/Desktop/flutter/bin" $PATH

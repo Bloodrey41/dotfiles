@@ -13,21 +13,21 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 #starting utility applications at boot time
 lxsession &
+run redshift &
 run nm-applet &
 run pamac-tray &
-numlockx on &
+run volumeicon &
+#numlockx on &
 blueman-applet &
 #flameshot &
 #picom --config $HOME/.config/picom/picom.conf &
 picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/*
+feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/* &
 #feh --bg-fill /usr/share/wallpapers/garuda-wallpapers/qtile.jpg
 #starting user applications at boot time
-xrandr --output HDMI-2 --primary
-run volumeicon &
-run redshift &
+xrandr --output HDMI-2 --primary &
 #run discord &
 #nitrogen --random --set-zoom-fill &
 #run caffeine -a &
