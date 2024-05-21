@@ -1,0 +1,10 @@
+/*
+!.gitignore
+!.tmux.conf
+!.config
+.config/*
+!.config/redshift.conf
+!.config/nvim
+!.config/i3
+!.config/i3status
+!.config/kitty
