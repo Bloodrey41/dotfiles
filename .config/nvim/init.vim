@@ -42,7 +42,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'ap/vim-css-color'
 Plug 'chrisbra/csv.vim'
 Plug 'prisma/vim-prisma'
-Plug 'ixru/nvim-markdown'
 Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 
 " navigation
