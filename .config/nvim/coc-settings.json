@@ -1,4 +1,10 @@
 {
+  "workspace.rootPatterns": [
+  	".git",
+  	".hg",
+  	".projections.json",
+	".env"
+  ],
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
