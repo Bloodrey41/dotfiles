@@ -68,7 +68,7 @@ format_down = "No battery"
 }
 
 tztime local {
-format = "   %H:%M:%S |   %a. %d.%m.%Y"
+format = "   %H:%M:%S |   %a. %d.%m.%Y"
 locale = "de_DE.UTF-8"
 }
 
