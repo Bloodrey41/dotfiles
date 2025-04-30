@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!.tmux.conf
+
+!.config
+.config/*
+!.config/nvim
+!.config/hypr
+!.config/waybar
+!.config/fish
+!.config/foot
+
+!Documents
+Documents/*
+!Documents/git.sh
