@@ -49,10 +49,10 @@ return {
     lazy = false,
   },
 
-  {
-    "preservim/nerdcommenter",
-    -- lazy = false,
-  },
+  -- {
+  --   "preservim/nerdcommenter",
+  --   lazy = false,
+  -- },
 
   {
     "maxmellon/vim-jsx-pretty",
@@ -75,10 +75,13 @@ return {
     lazy = false,
   },
 
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
-  },
+  -- {
+  --   "aserowy/tmux.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("tmux").setup()
+  --   end
+  -- },
 
   {
     "alvan/vim-closetag",
@@ -100,6 +103,11 @@ return {
     config = function ()
       vim.g.codeium_no_map_tab = true
     end
+  },
+
+  {
+    "mattn/emmet-vim",
+    lazy = false,
   },
 
   {
