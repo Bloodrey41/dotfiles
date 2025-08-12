@@ -171,6 +171,7 @@ if status --is-interactive && type -q fastfetch
 end
 
 alias v 'nvim .'
+alias ic '~/Downloads/ioncube_encoder_evaluation/ioncube_encoder.sh'
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
