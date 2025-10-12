@@ -116,6 +116,63 @@ return {
   },
 
   {
+    "Vigemus/iron.nvim",
+    lazy = false,
+    config = function()
+      local iron = require("iron.core")
+      local view = require("iron.view")
+      local common = require("iron.fts.common")
+
+      iron.setup {
+        config = {
+          scratch_repl = true,
+          repl_definition = {
+            sh = {
+              command = { "fish" }
+            },
+            python = {
+              command = { "python" },
+              format = common.bracketed_paste_python,
+              block_dividers = { "# %%", "#%%" },
+              env = { PYTHON_BASIC_REPL = "1" }
+            }
+          },
+          repl_filetype = function(bufnr, ft)
+            return ft
+          end,
+          dap_integration = true,
+          repl_open_cmd = view.split.vertical.botright(50),
+        },
+        keymaps = {
+          toggle_repl = "<Leader>rr",
+          -- toggle_repl_with_cmd_1 = "<Leader>rv",
+          restart_repl = "<Leader>rR",
+          send_motion = "<Leader>sc",
+          visual_send = "<Leader>sc",
+          send_file = "<Leader>sf",
+          send_line = "<Leader>sl",
+          send_paragraph = "<Leader>sp",
+          send_until_cursor = "<Leader>su",
+          send_mark = "<Leader>sm",
+          send_code_block = "<Leader>sb",
+          send_code_block_and_move = "<Leader>sn",
+          mark_motion = "<Leader>mc",
+          mark_visual = "<Leader>mc",
+          remove_mark = "<Leader>md",
+          cr = "<Leader>s<CR>",
+          interrupt = "<Leader>s<Leader>",
+          exit = "<Leader>sq",
+          clear = "<Leader>cl"
+        },
+        highlight = {
+          italic = true
+        },
+        ignore_blank_lines = true
+      }
+    end
+  },
+
+  {
     "andweeb/presence.nvim",
     lazy = false,
     config = function()
