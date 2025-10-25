@@ -131,7 +131,7 @@ return {
               command = { "fish" }
             },
             python = {
-              command = { "python" },
+              command = { "ipython", "--no-autoindent" },
               format = common.bracketed_paste_python,
               block_dividers = { "# %%", "#%%" },
               env = { PYTHON_BASIC_REPL = "1" }
@@ -147,22 +147,22 @@ return {
           toggle_repl = "<Leader>rr",
           -- toggle_repl_with_cmd_1 = "<Leader>rv",
           restart_repl = "<Leader>rR",
-          send_motion = "<Leader>sc",
-          visual_send = "<Leader>sc",
-          send_file = "<Leader>sf",
-          send_line = "<Leader>sl",
-          send_paragraph = "<Leader>sp",
-          send_until_cursor = "<Leader>su",
-          send_mark = "<Leader>sm",
-          send_code_block = "<Leader>sb",
-          send_code_block_and_move = "<Leader>sn",
-          mark_motion = "<Leader>mc",
-          mark_visual = "<Leader>mc",
-          remove_mark = "<Leader>md",
-          cr = "<Leader>s<CR>",
-          interrupt = "<Leader>s<Leader>",
-          exit = "<Leader>sq",
-          clear = "<Leader>cl"
+          send_motion = "<Leader>rsc",
+          visual_send = "<Leader>rsc",
+          send_file = "<Leader>rsf",
+          send_line = "<Leader>rsl",
+          send_paragraph = "<Leader>rsp",
+          send_until_cursor = "<Leader>rsu",
+          send_mark = "<Leader>rsm",
+          send_code_block = "<Leader>rsb",
+          send_code_block_and_move = "<Leader>rsn",
+          mark_motion = "<Leader>rmc",
+          mark_visual = "<Leader>rmc",
+          remove_mark = "<Leader>rmd",
+          cr = "<Leader>rs<CR>",
+          interrupt = "<Leader>rs<Leader>",
+          exit = "<Leader>rq",
+          clear = "<Leader>rc"
         },
         highlight = {
           italic = true
