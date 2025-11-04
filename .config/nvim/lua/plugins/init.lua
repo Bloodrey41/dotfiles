@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -141,7 +141,7 @@ return {
             return ft
           end,
           dap_integration = true,
-          repl_open_cmd = view.split.vertical.botright(50),
+          repl_open_cmd = view.split.vertical.botright(55),
         },
         keymaps = {
           toggle_repl = "<Leader>rr",
