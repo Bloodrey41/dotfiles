@@ -114,7 +114,7 @@ alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listi
 alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 
 # Replace some more things with better alternatives
-alias cat 'bat --style header --style snip --style changes --style header'
+abbr cat 'bat --style header,snip,changes'
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
     alias yay 'paru'
 end
@@ -171,7 +171,7 @@ if status --is-interactive && type -q fastfetch
 end
 
 alias v 'nvim .'
-alias ic '~/Downloads/ioncube_encoder_evaluation/ioncube_encoder.sh'
+alias cs '~/Downloads/Cursor-2.0.77-x86_64.AppImage .'
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
