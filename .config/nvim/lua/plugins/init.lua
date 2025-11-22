@@ -141,7 +141,7 @@ return {
             return ft
           end,
           dap_integration = true,
-          repl_open_cmd = view.split.vertical.botright(55),
+          repl_open_cmd = view.split.vertical.botright(50),
         },
         keymaps = {
           toggle_repl = "<Leader>rr",

@@ -19,7 +19,7 @@ map("n", "<Leader>lf", "<cmd>!leptosfmt ./**/*.rs<CR>", { desc = "leptosfmt" })
 -- fugitive.vim
 map("n", "<Leader>gs", "<cmd>Git<CR>", { desc = "Git status" })
 map("n", "<Leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
-map("n", "<Leader>gl", "<cmd>Git log<CR>", { desc = "Git log" })
+map("n", "<Leader>gl", "<cmd>Git log --oneline --graph<CR>", { desc = "Git log" })
 map(
   "n",
   "<Leader>gm",
