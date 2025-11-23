@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "rust_analyzer", "ts_ls", "intelephense", "tailwindcss", "pyright", "lua_ls", "html", "cssls", "biome" }
+local servers = { "ts_ls", "intelephense", "tailwindcss", "pyright", "lua_ls", "html", "cssls", "biome" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -15,6 +15,20 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+-- Configure rust_analyzer with Clippy enabled
+lspconfig.rust_analyzer.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      check = {
+        command = "clippy",
+      },
+    },
+  },
+}
 
 lspconfig.intelephense.setup {
   init_options = {
