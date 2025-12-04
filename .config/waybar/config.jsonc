@@ -9,9 +9,27 @@
     // Choose the order of the modules
     // Add according to your wishes: "custom/weather"
 
-    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+    "modules-left": [
+      // "custom/launcher",
+      "hyprland/workspaces",
+      "hyprland/window"
+    ],
     "modules-center": ["custom/network_traffic"],
-    "modules-right": ["custom/updates", "backlight", "custom/keyboard-layout", "temperature", "cpu", "memory", "battery", "pulseaudio", "network", "tray", "idle_inhibitor", "clock","custom/power"],
+    "modules-right": [
+      "custom/updates",
+      "backlight", 
+      // "custom/keyboard-layout",
+      "temperature",
+      "cpu", 
+      "memory",
+      "battery",
+      "pulseaudio",
+      // "network",
+      "tray",
+      // "idle_inhibitor",
+      "clock",
+      "custom/power"
+    ],
 
  // Modules configuration
 
