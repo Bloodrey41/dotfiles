@@ -1,0 +1,542 @@
+/* ===== Nord Aurora - Floating Islands Waybar Theme ===== */
+/* Glassmorphism aesthetic with pill-shaped floating modules */
+
+/* ===== Nord Color Palette ===== */
+@define-color nord0 #2E3440;   /* Polar Night - darkest */
+@define-color nord1 #3B4252;   /* Polar Night - dark */
+@define-color nord2 #434C5E;   /* Polar Night - medium */
+@define-color nord3 #4C566A;   /* Polar Night - light */
+
+@define-color nord4 #D8DEE9;   /* Snow Storm - dark */
+@define-color nord5 #E5E9F0;   /* Snow Storm - medium */
+@define-color nord6 #ECEFF4;   /* Snow Storm - bright */
+
+@define-color nord7 #8FBCBB;   /* Frost - cyan */
+@define-color nord8 #88C0D0;   /* Frost - light blue */
+@define-color nord9 #81A1C1;   /* Frost - blue */
+@define-color nord10 #5E81AC;  /* Frost - dark blue */
+
+@define-color nord11 #BF616A;  /* Aurora - red */
+@define-color nord12 #D08770;  /* Aurora - orange */
+@define-color nord13 #EBCB8B;  /* Aurora - yellow */
+@define-color nord14 #A3BE8C;  /* Aurora - green */
+@define-color nord15 #B48EAD;  /* Aurora - purple */
+
+/* ===== Transparent Backgrounds ===== */
+@define-color bg-alpha rgba(46, 52, 64, 0.85);
+@define-color bg-hover rgba(59, 66, 82, 0.90);
+@define-color island-bg rgba(59, 66, 82, 0.75);
+
+/* ===== Global Styles ===== */
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrainsMono NF", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+/* ===== Main Waybar Window - Fully Transparent ===== */
+window#waybar {
+    background-color: transparent;
+    color: @nord4;
+    border-radius: 0;
+}
+
+/* The box containing all modules - invisible container */
+window#waybar > box {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+window#waybar.hidden {
+    opacity: 0;
+}
+
+/* ===== Left Side Container - Floating Island ===== */
+.modules-left {
+    background-color: @bg-alpha;
+    border: 1px solid @nord3;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin: 8px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Center Container - Floating Island ===== */
+.modules-center {
+    background-color: @bg-alpha;
+    border: 1px solid @nord3;
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Right Side Container - Floating Island ===== */
+.modules-right {
+    background-color: @bg-alpha;
+    border: 1px solid @nord3;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin: 8px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Logo Module ===== */
+#custom-logo {
+    background: linear-gradient(135deg, @nord10, @nord9);
+    color: @nord6;
+    padding: 0 16px 0 12px;
+    margin: 0 6px 0 0;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* #custom-logo:hover { */
+/*     background: linear-gradient(135deg, @nord9, @nord8); */
+/*     box-shadow: 0 0 12px rgba(136, 192, 208, 0.5); */
+/* } */
+
+/* ===== Workspaces - Pill Style with Glow ===== */
+#workspaces {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0 8px;
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0 3px;
+    color: @nord4;
+    background-color: @nord1;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 24px;
+    border: 1px solid transparent;
+}
+
+#workspaces button:hover {
+    background-color: @nord2;
+    color: @nord6;
+    border-color: @nord3;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background: linear-gradient(135deg, @nord10, @nord9);
+    color: @nord6;
+    box-shadow: 0 2px 8px rgba(94, 129, 172, 0.4);
+    border-color: @nord8;
+}
+
+#workspaces button.visible {
+    background-color: @nord2;
+    color: @nord5;
+    border-color: @nord3;
+}
+
+#workspaces button.urgent {
+    background: linear-gradient(135deg, @nord11, @nord12);
+    color: @nord6;
+    animation: urgent-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes urgent-pulse {
+    0% { box-shadow: 0 0 4px rgba(191, 97, 106, 0.4); }
+    50% { box-shadow: 0 0 12px rgba(191, 97, 106, 0.8); }
+    100% { box-shadow: 0 0 4px rgba(191, 97, 106, 0.4); }
+}
+
+#workspaces button.empty {
+    color: @nord3;
+    background-color: rgba(67, 76, 94, 0.5);
+}
+
+/* ===== Window Title ===== */
+#window {
+    color: @nord5;
+    margin: 0 8px;
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: transparent;
+    border-left: 1px solid @nord3;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    border: none;
+}
+
+/* ===== Clock - Centerpiece ===== */
+#clock {
+    color: @nord8;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 12px;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+#clock:hover {
+    color: @nord7;
+    text-shadow: 0 0 8px rgba(143, 188, 187, 0.5);
+}
+
+/* ===== Group Containers ===== */
+#group-audio,
+#group-system,
+#group-hardware {
+    background-color: @island-bg;
+    border-radius: 14px;
+    padding: 2px 4px;
+    margin: 0 4px;
+    border: 1px solid rgba(76, 86, 106, 0.5);
+}
+
+/* ===== Module Base Styles - Pills ===== */
+#pulseaudio,
+#pulseaudio.microphone,
+#backlight,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#battery,
+#tray {
+    background-color: transparent;
+    padding: 0 10px;
+    margin: 2px 2px;
+    border-radius: 10px;
+    color: @nord4;
+    transition: all 0.25s ease;
+}
+
+/* ===== Tray ===== */
+#tray {
+    padding: 0 8px;
+    background-color: transparent;
+    margin-right: 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: rgba(191, 97, 106, 0.2);
+    border-radius: 8px;
+}
+
+#tray menu {
+    background-color: @nord0;
+    border: 1px solid @nord3;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#tray menuitem {
+    padding: 6px 14px;
+    color: @nord4;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+#tray menuitem:hover {
+    background-color: @nord2;
+    color: @nord6;
+}
+
+/* ===== Pulseaudio (Output) - Green accent ===== */
+#pulseaudio {
+    color: @nord14;
+}
+
+#pulseaudio:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#pulseaudio.muted {
+    color: @nord11;
+    background-color: rgba(191, 97, 106, 0.2);
+}
+
+/* ===== Pulseaudio Microphone - Purple accent ===== */
+#pulseaudio.microphone {
+    color: @nord15;
+    padding-right: 10px;
+}
+
+#pulseaudio.microphone:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#pulseaudio.microphone.muted {
+    color: @nord11;
+    background-color: rgba(191, 97, 106, 0.2);
+}
+
+/* ===== Backlight - Yellow accent ===== */
+#backlight {
+    color: @nord13;
+    padding-left: 10px;
+    border-left: 1px solid @nord3;
+}
+
+#backlight:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Network - Cyan accent ===== */
+#network {
+    color: @nord7;
+}
+
+#network:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#network.wifi {
+    color: @nord9;
+}
+
+#network.ethernet {
+    color: @nord8;
+}
+
+#network.disconnected {
+    color: @nord11;
+    background-color: rgba(191, 97, 106, 0.2);
+    animation: network-alert 2s ease-in-out infinite;
+}
+
+@keyframes network-alert {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* ===== Power Profiles - Blue accent ===== */
+#power-profiles-daemon {
+    color: @nord8;
+    padding-left: 8px;
+    border-left: 1px solid @nord3;
+}
+
+#power-profiles-daemon:hover {
+    background-color: @bg-hover;
+}
+
+#power-profiles-daemon.performance {
+    color: @nord12;
+    background: linear-gradient(90deg, rgba(208, 135, 112, 0.2), transparent);
+    animation: performance-glow 2s ease-in-out infinite;
+}
+
+#power-profiles-daemon.balanced {
+    color: @nord14;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @nord7;
+}
+
+@keyframes performance-glow {
+    0% { text-shadow: 0 0 4px rgba(208, 135, 112, 0.4); }
+    50% { text-shadow: 0 0 8px rgba(208, 135, 112, 0.8); }
+    100% { text-shadow: 0 0 4px rgba(208, 135, 112, 0.4); }
+}
+
+/* ===== CPU - Blue accent ===== */
+#cpu {
+    color: @nord9;
+}
+
+#cpu:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#cpu.warning {
+    color: @nord13;
+    background-color: rgba(235, 203, 139, 0.15);
+}
+
+#cpu.critical {
+    color: @nord6;
+    background: linear-gradient(90deg, @nord11, @nord12);
+    animation: critical-pulse 0.8s ease-in-out infinite;
+}
+
+/* ===== Memory - Purple accent ===== */
+#memory {
+    color: @nord15;
+    border-left: 1px solid @nord3;
+    padding-left: 10px;
+}
+
+#memory:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#memory.warning {
+    color: @nord13;
+    background-color: rgba(235, 203, 139, 0.15);
+}
+
+#memory.critical {
+    color: @nord6;
+    background: linear-gradient(90deg, @nord11, @nord12);
+    animation: critical-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes critical-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* ===== Battery - Green accent with charging animation ===== */
+#battery {
+    color: @nord14;
+    border-left: 1px solid @nord3;
+    padding-left: 10px;
+}
+
+#battery:hover {
+    background-color: @bg-hover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @nord14;
+    background: linear-gradient(90deg, rgba(163, 190, 140, 0.2), transparent);
+    animation: charge-glow 2s ease-in-out infinite;
+}
+
+@keyframes charge-glow {
+    0% { 
+        color: @nord14;
+        text-shadow: 0 0 4px rgba(163, 190, 140, 0.4);
+    }
+    50% { 
+        color: @nord8;
+        text-shadow: 0 0 8px rgba(136, 192, 208, 0.6);
+    }
+    100% { 
+        color: @nord14;
+        text-shadow: 0 0 4px rgba(163, 190, 140, 0.4);
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: @nord13;
+    background-color: rgba(235, 203, 139, 0.2);
+    animation: warning-pulse 1.5s ease-in-out infinite;
+}
+
+#battery.critical:not(.charging) {
+    color: @nord6;
+    background: linear-gradient(90deg, @nord11, @nord12);
+    animation: battery-critical 1s ease-in-out infinite;
+}
+
+@keyframes warning-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+@keyframes battery-critical {
+    0% { 
+        opacity: 1;
+        box-shadow: 0 0 4px rgba(191, 97, 106, 0.5);
+    }
+    50% { 
+        opacity: 0.7;
+        box-shadow: 0 0 12px rgba(191, 97, 106, 0.8);
+    }
+    100% { 
+        opacity: 1;
+        box-shadow: 0 0 4px rgba(191, 97, 106, 0.5);
+    }
+}
+
+/* ===== Power Button - Red accent ===== */
+#custom-power {
+    color: @nord11;
+    background: linear-gradient(135deg, rgba(191, 97, 106, 0.2), rgba(191, 97, 106, 0.1));
+    padding: 0 12px;
+    margin: 2px 0 2px 6px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: 1px solid rgba(191, 97, 106, 0.3);
+    transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+    background: linear-gradient(135deg, @nord11, @nord12);
+    color: @nord6;
+    box-shadow: 0 0 12px rgba(191, 97, 106, 0.5);
+    border-color: @nord11;
+}
+
+/* ===== Tooltip - Glassmorphism ===== */
+tooltip {
+    background-color: @nord0;
+    border: 1px solid @nord3;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+tooltip label {
+    color: @nord4;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+tooltip * {
+    background-color: transparent;
+}
+
+/* ===== Group Hover Effects ===== */
+#group-audio:hover,
+#group-system:hover,
+#group-hardware:hover {
+    background-color: rgba(59, 66, 82, 0.85);
+    border-color: @nord3;
+    transition: all 0.3s ease;
+}
+
+/* ===== Audio Group Specifics ===== */
+#group-audio {
+    border-left: 2px solid @nord14;
+}
+
+/* ===== System Group Specifics ===== */
+#group-system {
+    border-left: 2px solid @nord8;
+}
+
+/* ===== Hardware Group Specifics ===== */
+#group-hardware {
+    border-left: 2px solid @nord9;
+}

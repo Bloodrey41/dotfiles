@@ -1,0 +1,16 @@
+/*
+!.gitignore
+!.tmux.conf
+
+!.config
+.config/*
+!.config/nvim
+!.config/hypr
+!.config/waybar
+!.config/fish
+!.config/kitty
+!.agents
+!.cursor
+.cursor/*
+!.cursor/skills
+!.cursor/rules

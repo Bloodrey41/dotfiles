@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "skills": {
+    "interface-design": {
+      "source": "dammyjay93/interface-design",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dammyjay93/interface-design.git",
+      "skillPath": ".claude/skills/interface-design/SKILL.md",
+      "skillFolderHash": "3c1c18ac9f9732a8be68cb8504bf234fdafcf5c8",
+      "installedAt": "2026-02-05T15:42:07.775Z",
+      "updatedAt": "2026-02-16T19:09:39.646Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "079b06a135401704ea94ab74c7c9d86c92ba259f",
+      "installedAt": "2026-02-05T15:49:49.996Z",
+      "updatedAt": "2026-02-16T19:09:22.699Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "d28aa4ed67fe5a3f1336f0fcccb1e548c67dc864",
+      "installedAt": "2026-02-05T15:52:24.632Z",
+      "updatedAt": "2026-02-16T19:09:34.047Z"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "828c239ac986cc1fc7edd10292f66e4a3640e9c0",
+      "installedAt": "2026-02-05T15:54:42.694Z",
+      "updatedAt": "2026-02-16T19:09:51.035Z"
+    },
+    "changelog-generator": {
+      "source": "composiohq/awesome-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/composiohq/awesome-claude-skills.git",
+      "skillPath": "changelog-generator/SKILL.md",
+      "skillFolderHash": "72258d6496ccd708fb946591d944282d6de03f13",
+      "installedAt": "2026-02-05T16:00:09.560Z",
+      "updatedAt": "2026-02-16T19:10:02.775Z"
+    },
+    "api-design-principles": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+      "skillFolderHash": "d9f49b5a4c69c1372041ac3892b9c4a3bdd4b02a",
+      "installedAt": "2026-02-05T16:01:09.428Z",
+      "updatedAt": "2026-02-16T19:09:46.458Z"
+    },
+    "error-handling-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/error-handling-patterns/SKILL.md",
+      "skillFolderHash": "81b4b27fd40b299771504a51f197c42df9661e79",
+      "installedAt": "2026-02-05T16:02:24.812Z",
+      "updatedAt": "2026-02-16T19:09:56.432Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "codex",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "cursor"
+  ]
+}

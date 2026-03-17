@@ -1,0 +1,32 @@
+---
+description: Always check available skills before starting tasks
+alwaysApply: true
+---
+
+# Check Available Skills First
+
+Before starting any task, I must check if there are available skills that can help complete the task more effectively.
+
+## Steps
+
+1. **Read the skills directory** at `/home/miguel/.agents/skills/` and `/home/miguel/.cursor/skills/`
+2. **Identify relevant skills** based on the task at hand
+3. **Read and follow** any applicable skill immediately before proceeding
+
+## Relevant Skills Examples
+
+| Task Type | Skill to Use |
+|-----------|--------------|
+| API design | `api-design-principles` |
+| Error handling | `error-handling-patterns` |
+| Interface design | `interface-design` |
+| Debugging | `systematic-debugging` |
+| React/Next.js | `vercel-react-best-practices` |
+| Brainstorming | `brainstorming` |
+| Changelog generation | `changelog-generator` |
+| Creating rules | `context7-mcp/create-rule` |
+| Creating skills | `context7-mcp/create-skill` |
+
+## Rule
+
+**Never skip reading relevant skills.** They provide specialized knowledge that improves output quality significantly.
