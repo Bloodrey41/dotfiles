@@ -1,0 +1,24 @@
+[opener]
+edit = [
+{
+  run = 'nvim "$@"', block = true, desc = 'Editor', for = 'unix'
+}
+]
+play = [
+{
+  run = 'vls "$@"', desc = 'VLC', for = 'unix'
+}
+]
+
+[open]
+rules = [
+{
+  mime = 'text/*', use = 'edit'
+},
+{
+  mime = 'video/*', use = 'play'
+},
+{
+  name = '*.json', use = 'edit'
+}
+]
