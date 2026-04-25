@@ -20,63 +20,33 @@ map("n", "<Leader>lf", "<cmd>!leptosfmt ./**/*.rs<CR>", { desc = "leptosfmt" })
 map("n", "<Leader>gs", "<cmd>Git<CR>", { desc = "Git status" })
 map("n", "<Leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit" })
 map("n", "<Leader>gl", "<cmd>Git log --oneline --graph<CR>", { desc = "Git log" })
-map(
-  "n",
-  "<Leader>gm",
-  function()
-    local head = vim.fn["FugitiveHead"]()
+map("n", "<Leader>gm", function()
+  local head = vim.fn["FugitiveHead"]()
 
-    vim.cmd("Git pull origin " .. head)
-  end,
-  { desc = "Git pull" }
-)
-map(
-  "n",
-  "<Leader>gp",
-  function()
-    local head = vim.fn["FugitiveHead"]()
+  vim.cmd("Git pull origin " .. head)
+end, { desc = "Git pull" })
+map("n", "<Leader>gp", function()
+  local head = vim.fn["FugitiveHead"]()
 
-    vim.cmd("Git push origin " .. head)
-  end,
-  { desc = "Git push" }
-)
+  vim.cmd("Git push origin " .. head)
+end, { desc = "Git push" })
 
 -- EasyMotion
 map("n", "<Leader>s", "<Plug>(easymotion-s2)", { desc = "EasyMotion" })
 
 -- Codeium
-map(
-  "i",
-  "<C-g>",
-  function()
-    return vim.fn["codeium#Accept"]()
-  end,
-  { expr = true, silent = true }
-)
-map(
-  "i",
-  "<C-;>",
-  function()
-    return vim.fn["codeium#CycleCompletions"](1)
-  end,
-  { expr = true, silent = true }
-)
-map(
-  "i",
-  "<C-,>",
-  function()
-    return vim.fn["codeium#CycleCompletions"](-1)
-  end,
-  { expr = true, silent = true }
-)
-map(
-  "i",
-  "<C-x>",
-  function()
-    return vim.fn["codeium#Clear"]()
-  end,
-  { expr = true, silent = true }
-)
+map("i", "<C-g>", function()
+  return vim.fn["codeium#Accept"]()
+end, { expr = true, silent = true })
+map("i", "<C-;>", function()
+  return vim.fn["codeium#CycleCompletions"](1)
+end, { expr = true, silent = true })
+map("i", "<C-,>", function()
+  return vim.fn["codeium#CycleCompletions"](-1)
+end, { expr = true, silent = true })
+map("i", "<C-x>", function()
+  return vim.fn["codeium#Clear"]()
+end, { expr = true, silent = true })
 
 -- Nvim DAP
 --map("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })

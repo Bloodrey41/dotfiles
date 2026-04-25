@@ -15,3 +15,8 @@
 .cursor/*
 !.cursor/skills
 !.cursor/rules
+!.claude
+.claude/*
+!.claude/skills
+!.claude/agents
+!.claude/settings.json
