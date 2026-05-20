@@ -11,6 +11,7 @@
 !.config/kitty
 !.config/yazi
 !.agents
+!.config/opencode
 !.cursor
 .cursor/*
 !.cursor/skills
