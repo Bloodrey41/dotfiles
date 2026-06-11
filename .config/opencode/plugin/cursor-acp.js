@@ -1,0 +1,1 @@
+/home/miguel/.bun/install/global/node_modules/@rama_nigg/open-cursor/dist/plugin-entry.js
