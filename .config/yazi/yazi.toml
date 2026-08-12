@@ -1,12 +1,12 @@
 [opener]
 edit = [
 {
-  run = 'nvim "$@"', block = true, desc = 'Editor', for = 'unix'
+  run = 'nvim %s', block = true, desc = 'Editor', for = 'unix'
 }
 ]
 play = [
 {
-  run = 'vls "$@"', desc = 'VLC', for = 'unix'
+  run = 'vls %s', desc = 'VLC', for = 'unix'
 }
 ]
 
@@ -19,6 +19,6 @@ rules = [
   mime = 'video/*', use = 'play'
 },
 {
-  name = '*.json', use = 'edit'
+  url = '*.json', use = 'edit'
 }
 ]
