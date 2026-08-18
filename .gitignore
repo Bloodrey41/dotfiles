@@ -21,3 +21,6 @@
 !.claude/skills
 !.claude/agents
 !.claude/settings.json
+!.ollama
+.ollama/*
+!.ollama/config.json

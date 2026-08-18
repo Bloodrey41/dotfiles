@@ -1,0 +1,10 @@
+{
+  "integrations": {
+    "claude": {
+      "models": [
+        "deepseek-v4-pro:0813-cloud"
+      ]
+    }
+  },
+  "last_selection": "claude"
+}

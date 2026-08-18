@@ -9,7 +9,6 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 alias v 'nvim .'
 alias y 'yazi'
-alias olc 'ollama launch claude'
 alias olo 'ollama launch opencode'
 alias oc 'opencode'
 alias a 'agent'
