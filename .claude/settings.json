@@ -1,5 +1,5 @@
 {
-  "model": "sonnet",
+  "model": "haiku",
   "hooks": {
     "PreToolUse": [
       {
@@ -28,6 +28,16 @@
           {
             "type": "command",
             "command": "serena-hooks activate --client=claude-code"
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/miguel/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
           }
         ]
       }
@@ -60,5 +70,6 @@
     }
   },
   "effortLevel": "xhigh",
-  "skipWorkflowUsageWarning": true
+  "skipWorkflowUsageWarning": true,
+  "theme": "custom:nord"
 }

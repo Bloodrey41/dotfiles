@@ -2,7 +2,7 @@
   "integrations": {
     "claude": {
       "models": [
-        "deepseek-v4-pro:0813-cloud"
+        "minimax-m3:cloud"
       ]
     }
   },
