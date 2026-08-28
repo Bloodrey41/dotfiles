@@ -33,6 +33,15 @@ Before starting, and at every decision point:
    your context — scan it; do not assume the three general tools are all that
    exists. State which tools you will use and why before starting. This
    inventory is what the report in rule 5 is checked against.
+   - **Orchestrators (main session):** you are the only agent that can see
+     agents, skills (including plugin skills), and the full MCP set — tool
+     selection is yours. Before dispatching a subagent, load the relevant
+     skill and pick the relevant agent type yourself, then pass distilled
+     guidance and the exact tools to use into the subagent's prompt.
+   - **Subagents:** your context lists MCP tools and standard tools — agents
+     and skill listings are usually not visible to you. Don't scan for tools
+     you don't have; use a skill if the dispatch prompt names one, otherwise
+     apply the guidance passed to you.
 
 3. **Use the right tools — both layers are mandatory.** Follow the global
    tool-selection rule. The three general tools are mandatory in their roles:
@@ -50,7 +59,8 @@ Before starting, and at every decision point:
    instructions" preamble so any agent reading the doc follows the same rules
    — propose before build with evidence, correct with evidence, inventory
    tools before work, use specialized tools when they fit, Serena/Ponytail/CBM
-   mandatory.
+   mandatory. Name the specific skills, agents, or MCPs the reader should
+   invoke — a generic "use specialized tools" is not enough.
 
 5. **Report tool usage.** At the end of each task, present a structured report
    of which tools were used, when, and why. The report must include:
@@ -61,6 +71,8 @@ Before starting, and at every decision point:
    - Serena: how it was used (what edits were made, what diagnostics were run)
    - Specialized tools (agents, MCPs, plugins, skills): which were used and
      what they contributed
+   - Dispatch (orchestrators only): which skills/agents were loaded before
+     each subagent dispatch and what guidance was injected
    - Tools that were available but NOT used: list each with a one-line reason
 
    Failure to produce this report, omitting a mandatory tool
