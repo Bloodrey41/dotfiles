@@ -1,11 +1,21 @@
 {
   "lastChangelogVersion": "0.84.4",
   "theme": "dark",
-  "npmCommand": ["bun"],
+  "npmCommand": [
+    "bun"
+  ],
   "packages": [
     "git:github.com/obra/superpowers",
     "npm:@dietrichgebert/ponytail",
     "npm:pi-subagents",
-    "npm:pi-mcp-adapter"
+    "npm:pi-mcp-adapter",
+    "git:github.com/shadcn/improve",
+    "npm:pi-memory",
+    "npm:pi-web-access",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@narumitw/pi-plan-mode",
+    "npm:@gotgenes/pi-permission-system",
+    "npm:pi-background-tasks"
   ]
 }

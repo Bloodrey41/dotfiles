@@ -35,3 +35,6 @@
 !.ollama
 .ollama/*
 !.ollama/config.json
+
+# runtime permission-review logs (machine-local)
+.pi/agent/extensions/pi-permission-system/logs/

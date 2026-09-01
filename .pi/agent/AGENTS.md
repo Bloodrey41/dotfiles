@@ -41,7 +41,8 @@ proposal.
   files; anything where two reasonable engineers would disagree.
 - **Research before proposing (mandatory).** Check the codebase for existing
   patterns and conventions; pull official docs for current API/framework
-  guidance (the Evidence-fetching chain below); web search where the field
+  guidance (the Evidence-fetching chain below); web search via pi-web-access
+  (`web_search`) where the field
   moves. Prefer real data, benchmarks, and version-specific docs over
   opinion or training-data habit. Fetching evidence is part of this rule —
   if evidence is needed, fetch it; do not silently fall back to training
@@ -196,7 +197,7 @@ the work is not approved and must be redone with correct tool usage.
 | Languages with no usable LSP | CBM (tree-sitter) or grep | Serena is blind without an LSP |
 | Polyglot repo, no per-language LSPs configured | CBM | One binary, 158 grammars |
 | ADR CRUD tied to the codebase | CBM `manage_adr` | ADR-specific, graph-adjacent |
-| General project memory / gotchas | Serena `write_memory` / `read_memory` (or the memory skill) | Freeform, editable, cross-session |
+| General project memory / gotchas | pi-memory `memory_write` / `memory_search` | Freeform, editable, cross-session, semantic search |
 
 **Tie-breakers for overlaps**
 
@@ -229,35 +230,52 @@ as follows when a skill or table mentions Claude Code tool names:
   (agents defined as markdown in `~/.pi/agent/agents/`); if no subagent
   tool is available, do the work in this session and say so — never
   invent `Task` calls.
-- Todo/task tracking → any installed todo tool; otherwise plan files or a
-  repo-local `TODO.md`.
+- Todo/task tracking → the `rpiv-todo` tools; plan files or a
+  repo-local `TODO.md` as fallback.
+- Background shell jobs (servers, builds, watchers) → `pi-background-tasks`
+  (`bg_run`/`bg_status`/`bg_kill`); agent delegation → `pi-subagents`
+  (`subagent` tool).
+- Structured proposals / decisions → the `ask-user-question` tool (typed
+  options, recommended option first and tagged), not prose questions.
 - MCP tools → the pi-mcp-adapter proxy (server tools appear as the adapter's
   tool surface).
 
 ## Evidence fetching
 
-Use `ctx7` via bunx for library/framework/SDK/CLI/cloud documentation —
-including well-known ones; training data may be stale. Max 3 commands per
-question; never silently fall back to training data.
+For library/framework/SDK/CLI/cloud documentation — including well-known
+libraries; training data may be stale — use the `find-docs` skill. It is the
+single canonical docs mechanism (Context7 CLI via bunx); follow its workflow
+and hard rules: max 3 commands per question, and never silently fall back to
+training data.
 
-```bash
-bunx ctx7@latest library <Library Name> "<the user's question>"   # resolve to /org/project
-bunx ctx7@latest docs    /org/project        "<the user's question>"   # fetch docs
-```
-
-Do not use for: refactoring, scripts from scratch, debugging business logic,
-code review, or general programming concepts.
+Do not use it for: refactoring, scripts from scratch, debugging business
+logic, code review, or general programming concepts.
 
 ## Memory
 
-Durable project knowledge (decisions, gotchas, handoffs, verified results)
-lives in per-project memory stores under `~/.pi/agent/memory/<project>/`,
-accessed through the `memory` skill:
+Memory is handled by the `pi-memory` package — extension tools
+(`memory_write`, `memory_read`, `memory_search`, `memory_forget`,
+`memory_restore`, `scratchpad`, `memory_status`), not a skill. Storage is
+plain markdown under `~/.pi/agent/memory/`:
 
-- At task start on a known project: `read ~/.pi/agent/memory/<project>/MEMORY.md`
-  (the index), then recall the relevant topic files on demand.
-- Record: one fact per file with frontmatter (`name`, `description`, `type`),
-  then add a one-line pointer to `MEMORY.md`. Never put content in the index.
+- `MEMORY.md` — curated cross-project long-term memory; tagged lines
+  (`#tag [[link]] fact`), project-specific lines carry a `#<project>` tag.
+  Injected into context each session (capped), so keep it lean.
+- `daily/YYYY-MM-DD.md` — append-only work log; session handoffs are written
+  here automatically on compaction.
+- `SCRATCHPAD.md` — open items; injected until done.
+- Per-project stores (e.g. `coloso-v2/`) — durable deep knowledge, one fact
+  per file (frontmatter: `name`, `description`, `type`) + a `MEMORY.md`
+  index. Keep this format for large project stores; qmd indexes everything.
+
+- At task start on a known project: read the project store's `MEMORY.md`
+  index, then recall topic files or use `memory_search` (keyword fast,
+  semantic/deep via qmd when wording differs).
+- Record durable facts with `memory_write` (long-term for facts/decisions,
+  daily for progress). Delete only via `memory_forget` (recovery-safe).
 - Don't record what the repo already shows (code structure, git history) or
   what only matters to the current conversation.
-- Link related memories with `[[their-name-slug]]`.
+- Link related memories with `[[their-name-slug]]`; use `#tags` for
+  searchability.
+- Durable repo conventions belong in the repo's `AGENTS.md` (versioned,
+  auto-loaded, shared) — memory is for what the repo can't show.
