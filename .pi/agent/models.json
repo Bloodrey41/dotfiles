@@ -1,0 +1,20 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://localhost:11434/v1",
+      "api": "openai-completions",
+      "apiKey": "ollama",
+      "models": [
+        {
+          "id": "glm-5.3-flash:cloud",
+          "name": "GLM 5.3 Flash (Ollama cloud)",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 1048576,
+          "maxTokens": 32000,
+          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 }
+        }
+      ]
+    }
+  }
+}

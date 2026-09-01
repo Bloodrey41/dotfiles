@@ -1,7 +1,7 @@
 # Launch Claude Code against Ollama with three distinct models selectable via /model.
-#   opus   -> glm-5.3-flash:cloud                           (main)
-#   sonnet -> glm-5.3-flash:cloud                           (second)
-#   haiku  -> deepseek-v4-flash:0731-cloud                  (third)
+#   opus   -> glm-5.3:cloud                           (main)
+#   sonnet -> glm-5.3-flash:cloud                     (second)
+#   haiku  -> deepseek-v4-flash:0731-cloud            (third)
 function olc
     set -lx ANTHROPIC_BASE_URL http://127.0.0.1:11434
     set -lx ANTHROPIC_API_KEY ""
@@ -11,8 +11,8 @@ function olc
     set -lx DISABLE_FEEDBACK_COMMAND 1
     set -lx CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY 1
 
-    set -lx ANTHROPIC_DEFAULT_OPUS_MODEL "glm-5.3-flash:cloud[1m]"
-    set -lx ANTHROPIC_DEFAULT_OPUS_MODEL_NAME "GLM-5.3-Flash"
+    set -lx ANTHROPIC_DEFAULT_OPUS_MODEL "glm-5.3:cloud[1m]"
+    set -lx ANTHROPIC_DEFAULT_OPUS_MODEL_NAME "GLM-5.3"
     set -lx ANTHROPIC_DEFAULT_SONNET_MODEL "glm-5.3-flash:cloud[1m]"
     set -lx ANTHROPIC_DEFAULT_SONNET_MODEL_NAME "GLM-5.3-Flash"
     set -lx ANTHROPIC_DEFAULT_HAIKU_MODEL "deepseek-v4-flash:0731-cloud[1m]"

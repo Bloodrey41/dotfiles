@@ -22,6 +22,16 @@
 !.claude/agents
 !.claude/rules
 !.claude/settings.json
+!.pi
+# Pi agent — local-only state (credentials, caches, installed packages, session/memory data)
+.pi/agent/auth.json
+.pi/agent/models-store.json
+.pi/agent/sessions/
+.pi/agent/npm/
+.pi/agent/git/
+.pi/agent/mcp-cache.json
+.pi/agent/mcp-npx-cache.json
+.pi/agent/memory/
 !.ollama
 .ollama/*
 !.ollama/config.json

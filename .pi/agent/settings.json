@@ -1,0 +1,11 @@
+{
+  "lastChangelogVersion": "0.84.4",
+  "theme": "dark",
+  "npmCommand": ["bun"],
+  "packages": [
+    "git:github.com/obra/superpowers",
+    "npm:@dietrichgebert/ponytail",
+    "npm:pi-subagents",
+    "npm:pi-mcp-adapter"
+  ]
+}

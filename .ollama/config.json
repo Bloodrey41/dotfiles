@@ -2,7 +2,7 @@
   "integrations": {
     "claude": {
       "models": [
-        "minimax-m3:cloud"
+        "glm-5.3-flash:cloud"
       ]
     }
   },
